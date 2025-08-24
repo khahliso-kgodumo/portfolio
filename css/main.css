@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Matrix background effect */
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #00ff41;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00ff41;
+    text-shadow: 0 0 5px #00ff41;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #00ff41;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00ff41;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    padding: 180px 0 100px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #00ff41;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #c0c0c0;
+}
+
+.typed-text {
+    color: #00ff41;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: transparent;
+    color: #00ff41;
+    border: 2px solid #00ff41;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+.btn:hover {
+    background: #00ff41;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px #00ff41;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #00ff41;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+/* About */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    color: #00ff41;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    width: 300px;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    border: 1px solid #00ff41;
+}
+
+.about-image img {
+    width: 300px;
+    height: auto;
+    display: block;
+}
+
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #222;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-color: #00ff41;
+}
+
+.project-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: #00ff41;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.project-tag {
+    background: rgba(0, 255, 65, 0.2);
+    color: #00ff41;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+
+/* Footer */
+footer {
+    background: rgba(10, 10, 10, 0.9);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #00ff41;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #00ff41;
+    color: #00ff41;
+    margin: 0 10px;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: #00ff41;
+    color: #0a0a0a;
+    box-shadow: 0 0 15px #00ff41;
+}
+
+
+/* CTF Game Section */
+    #ctf-game {
+        background: rgba(20, 20, 20, 0.9);
+        border: 1px solid #00ff41;
+        border-radius: 8px;
+        padding: 30px;
+        margin: 40px 0;
+        box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    }
+    
+    .ctf-terminal {
+        background: #1e1e1e;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        border: 1px solid #00ff41;
+        font-family: 'Courier New', monospace;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .ctf-header {
+        color: #00ff41;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+    }
+    
+    .ctf-instructions {
+        color: #e0e0e0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .game-terminal {
+        background: #0a0a0a;
+        border-radius: 6px;
+        padding: 15px;
+        height: 200px;
+        overflow-y: auto;
+        margin-bottom: 15px;
+    }
+    
+    .game-input {
+        display: flex;
+        align-items: center;
+    }
+    
+    .game-prompt {
+        color: #00ff41;
+        margin-right: 8px;
+    }
+    
+    .game-command {
+        background: transparent;
+        border: none;
+        color: #00ff41;
+        font-family: 'Courier New', monospace;
+        font-size: 1rem;
+        width: 100%;
+        outline: none;
+    }
+    
+    .statement {
+        margin: 10px 0;
+        padding: 10px;
+        background: rgba(0, 255, 65, 0.1);
+        border-left: 3px solid #00ff41;
+    }
+    
+    .success-msg {
+        color: #00ff41;
+        font-weight: bold;
+    }
+    
+    .error-msg {
+        color: #ff6b6b;
+        font-weight: bold;
+    }
+    
+    .hint {
+        color: #4ec9b0;
+        font-style: italic;
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+ /* Password Cracker Easter Egg */
+    .cracker-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 600px;
+        background: white;
+        border: 2px solid #00ff41;
+        border-radius: 10px;
+        z-index: 10000;
+        box-shadow: 0 0 30px rgba(0, 255, 65, 0.5);
+        overflow: hidden;
+        font-family: 'Courier New', monospace;
+        transition: transform 0.5s ease;
+        padding: 20px;
+    }
+    
+    .cracker-container.active {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .cracker-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #00ff41;
+    }
+    
+    .cracker-title {
+        color: black;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    .cracker-close {
+        background: #ff3333;
+        color: #000;
+        border: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .cracker-content {
+        color: black;
+        height: 300px;
+        overflow-y: auto;
+        margin-bottom: 15px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+    }
+    
+    .hash-line {
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+    
+    .cracker-input {
+        display: flex;
+        align-items: center;
+    }
+    
+    .cracker-prompt {
+        color: black;
+        margin-right: 8px;
+    }
+    
+    .cracker-field {
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid #00ff41;
+        color: white;
+        padding: 8px;
+        font-family: 'Courier New', monospace;
+        flex-grow: 1;
+        border-radius: 3px;
+    }
+    
+    .success-text {
+        color: #00ff41;
+        font-weight: bold;
+    }
+    
+    .fail-text {
+        color: #ff6b6b;
+    }
+    
+    .cracked-password {
+        color: #ffcc00;
+        font-weight: bold;
+    }
+    
+    /* Loading animation */
+    .loading-dots::after {
+        content: '';
+        animation: dots 1.5s infinite;
+    }
+    
+    @keyframes dots {
+        0%, 20% { content: '.'; }
+        40% { content: '..'; }
+        60%, 100% { content: '...'; }
+    }
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content,
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        display: none; /* Would add mobile menu in real implementation */
+    }
+}
