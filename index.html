@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Khahliso Kgodumo" name="author">
+    <meta content="Khahliso Kgodumo" name="title">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Computer Science, Cyber Security, InfoSec, Penetration Test, OWASP, Ethics" name="homepage" description="My private website">
+    <title>Khahliso Kgodumo | Aspiring Cybersecurity Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+   
+</style>
+</head>
+<body>
+    <!-- Matrix Background -->
+    <canvas id="matrix-bg"></canvas>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">$<span style="color: greenyellow;">_</span></div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Khahliso Kgodumo</h1>
+                <p>Aspiring Cybersecurity Specialist | Computer Science Student | Passionate about Threat Intelligence & Ethical Hacking</p>
+                <p>I intend to specialize in <span class="typed-text">threat detection</span>, <span class="typed-text">vulnerability assessment</span>, and <span class="typed-text">incident response</span>.</p>
+                <a href="#contact" class="btn">Download My CV</a>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Securing Digital Frontiers</h3>
+                    <p>I am a BSc Computer Science student at the University of Pretoria with a focused interest in cybersecurity.</p>
+                    <p>My journey into tech is driven by a fundamental belief that robust security systems must account for both technological vulnerabilities and human factors.</p>
+                    <p>I'm actively strengthening my technical foundation through personal projects and completing online course work.</p>
+                    <p>I am seeking opportunities to apply my analytical mindset and contribute to building more secure and resilient systems.</p>
+                </div>
+                <div class="about-image">
+                    <img src="img/me.jpeg" alt="Cybersecurity Analyst">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Add this HTML for the CTF game section -->
+<section id="ctf-game">
+    <h2 class="ctf-header">CYBERSECURITY CTF CHALLENGE</h2>
+    <p class="ctf-instructions">Can you identify the false statement? Use your hacking intuition.</p>
+    
+    <div class="ctf-terminal">
+        <div class="game-terminal" id="game-output">
+            <div class="terminal-line">
+                <span class="terminal-prompt">root@ctf:~#</span>
+                <span class="terminal-command">cat two_truths_one_lie.txt | grep "statement"</span>
+            </div>
+            <div class="terminal-output">
+                <div>Initializing challenge...</div>
+                <div>Loading statements...</div>
+                <div class="statement">1. The first programming language I learned was C.</div>
+                <div class="statement">2. I've spent over 8 years playing Clash Royale and now I'm in Legendary Arena .</div>
+                <div class="statement">3. My favourite anime at the time of writing this is Sword Art Online</div>
+                <div class="hint">Hint: Type 'check [number]' to validate your answer (e.g., 'check 2')</div>
+            </div>
+        </div>
+        
+        <div class="game-input">
+            <span class="game-prompt">ctf-player@game:~$</span>
+            <input type="text" class="game-command" id="game-input" placeholder="Type your command here...">
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/arp.png" alt="ARP Spoof Detection Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Automated ARP Spoof Detection</h3>
+                        <p>Designed and implemented a script for PCAP analysis, inspired by Wireshark.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Wireshark</span>
+                            <span class="project-tag">Packet Crafting</span>
+                            <span class="project-tag">Network Monitoring</span>
+                            <span class="project-tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/dvwa.jpeg" alt="OWASP Top 10  Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Damn Vulnerable Web App (DVWA) Penetration Test</h3>
+                        <p>Systematic reconnaissance, exploitation of OWASP Top 10, and the creation of a formal report with remediation advice.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">OWASP Top 10</span>
+                            <span class="project-tag">Web Application Security</span>
+                            <span class="project-tag">Security Reporting</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/docker.jpg" alt="Docker Isolated Lab Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Lab Environment with Docker</h3>
+                        <p>Designed and deployed an isolated network of Docker containers to serve as a reproducible platform for testing tools.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">Network Isolation</span>
+                            <span class="project-tag">Infrastructure as Code (IaC)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a target="_blank" href="https://github.com/khahliso-kgodumo"><i class="fab fa-github"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/khahliso-kgodumo-51742a2a5?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAEmRaGMB34SkSZX25sxbS9EAwGwzVTnFLFk&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BNyR5k3nQTRu9nLinPFCj6w%3D%3D"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Khahliso Kgodumo. All rights reserved.</p>
+            <p>Secure. Protect. Defend.</p>
+        </div>
+    </footer>
+
+    <script src="js/matrix.js"></script>
+    <script src="js/ctf.js"></script>
+    <!-- Add this element just before the closing body tag -->
+    <div class="cracker-container" id="cracker-container">
+    <div class="cracker-header">
+        <div class="cracker-title">PASSWORD CRACKING SIMULATION v2.5</div>
+        <button class="cracker-close" onclick="closeCracker()">X</button>
+    </div>
+    <div class="cracker-content" id="cracker-output">
+        <div class="hash-line">> Initializing password cracking sequence...</div>
+        <div class="hash-line">> Loading rainbow tables...</div>
+        <div class="hash-line">> Targeting hash: 5f4dcc3b5aa765d61d8327deb882cf99</div>
+        <div class="hash-line">> Hash type: MD5</div>
+        <div class="hash-line">> Starting brute force attack<span class="loading-dots"></span></div>
+    </div>
+    <div class="cracker-input">
+        <span class="cracker-prompt">cracker@console:~$</span>
+        <input type="text" class="cracker-field" id="cracker-input" placeholder="Type 'run' to start simulation...">
+    </div>
+</div>
+
+<script>
+    // Password cracking Easter egg
+    
+    function closeCracker() {
+        console.log("Closing")
+        document.getElementById('cracker-container').classList.remove('active');
+    }
+    
+</script>
+    
+
+</body>
+</html>
